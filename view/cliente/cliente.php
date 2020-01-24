@@ -102,8 +102,8 @@ if (!empty($_POST['txtFechaFin'])) {
                  
                }
                echo $clave; echo "</td>
-               <td>"; echo ($activos2*100)/$cantidad; echo "</td>
-               <td>"; echo($inactivos2*100)/$cantidad; echo "</td>
+               <td>"; echo ($activos2*100)/$cantidad; echo " %</td>
+               <td>"; echo($inactivos2*100)/$cantidad; echo "%</td>
                <td>"; echo $cantidad; echo "</td>
              </tr>
            </tbody>
@@ -127,8 +127,8 @@ if (!empty($_POST['txtFechaFin'])) {
     <tbody>
       <tr>
         <td><?php if($fecha==''){$periodo="Todo";}else{ $periodo= $fecha."--".$fecha2; } echo $periodo;?></td>
-        <td><?php echo ($activos*100)/count($datos); ?></td>
-        <td><?php echo($inactivos*100)/count($datos); ?></td>
+        <td><?php echo ($activos*100)/count($datos); ?>%</td>
+        <td><?php echo($inactivos*100)/count($datos); ?>%</td>
         <td><?php echo count($datos); ?></td>
       </tr>
     </tbody>
